@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://s2.loli.net/2023/03/07/j1vwXJmNUAxaieq.png">
 <meta property="og:image" content="https://s2.loli.net/2023/03/07/VyEdrDobqJWnk1j.png">
 <meta property="article:published_time" content="2023-03-06T16:58:13.607Z">
-<meta property="article:modified_time" content="2023-03-06T18:06:10.192Z">
+<meta property="article:modified_time" content="2023-03-06T18:54:28.926Z">
 <meta property="article:author" content="Bealee">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2023/03/07/6OyMsXql3t4k8PK.png">
@@ -92,6 +92,8 @@
     <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/03/07/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%99%BD%E7%9B%92%E5%AE%A1%E8%AE%A1%EF%BC%88%E6%BA%90%E7%A0%81%E5%AE%A1%E8%AE%A1%EF%BC%89/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" aria-label="Next post" href="/2023/03/06/%E5%B8%B8%E7%94%A8Docker%E5%91%BD%E4%BB%A4/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -172,7 +174,7 @@
 <img src="https://s2.loli.net/2023/03/07/ojfb3n7aYLmxdFr.png" alt="image-20230307005520483.png" style="float:left;" />
 
 <h2 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h2><p>本地生成ssh公钥命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;GitHub邮箱&quot;</span><br><span class="line">按下回车三次即可生成在C:\Users\xxxx\.ssh目录下</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;GitHub邮箱&quot;</span></span><br><span class="line">按下回车三次即可生成在C:\Users\xxxx\.ssh目录下</span><br></pre></td></tr></table></figure>
 
 <img src="https://s2.loli.net/2023/03/07/FYitZ92zcQbmRAh.png" alt="image-20230307005939890.png" style="float:left" />
 打开id_rsa.pub文件即可看到生成出来的公钥
@@ -180,11 +182,11 @@
 GitHub绑定公钥
 <img src="https://s2.loli.net/2023/03/07/Hsmht3VYokTfCS8.png" alt="image-20230307010333153.png" style="float:left" />
 测试公钥是否绑定GitHub命令
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 看到以下提示即成功绑定
 <img src="https://s2.loli.net/2023/03/07/fp15dB6SRwtaD4N.png" alt="image-20230307010619173.png" style="float:left" />
 
-<h2 id="安装hexo框架并生成博客内容"><a href="#安装hexo框架并生成博客内容" class="headerlink" title="安装hexo框架并生成博客内容"></a>安装hexo框架并生成博客内容</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g  //安装</span><br><span class="line">hexo init blog	//自定义博客</span><br><span class="line">cd blog	</span><br><span class="line">npm install		//安装项目所需要的全部包</span><br><span class="line">hexo server		//启动hexo</span><br></pre></td></tr></table></figure>
+<h2 id="安装hexo框架并生成博客内容"><a href="#安装hexo框架并生成博客内容" class="headerlink" title="安装hexo框架并生成博客内容"></a>安装hexo框架并生成博客内容</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g 	//安装</span><br><span class="line">hexo init blog			//自定义博客</span><br><span class="line"><span class="built_in">cd</span> blog	</span><br><span class="line">npm install			//安装项目所需要的全部包</span><br><span class="line">hexo server			//启动hexo</span><br></pre></td></tr></table></figure>
 
 <h2 id="提交hexo博客文件到GitHub仓库"><a href="#提交hexo博客文件到GitHub仓库" class="headerlink" title="提交hexo博客文件到GitHub仓库"></a>提交hexo博客文件到GitHub仓库</h2><p>修改本地配置文件为以下内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	respository: 仓库地址</span><br><span class="line">	branch:main</span><br></pre></td></tr></table></figure>
@@ -192,7 +194,8 @@ GitHub绑定公钥
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>提交当前目录文件夹的所有文件的到仓库</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g 	//生成博客页面</span><br><span class="line">hexo d	//提交到GitHub仓库</span><br></pre></td></tr></table></figure>
-<p>提交的过程中需要验证GitHub的token（默认自动弹窗确认账号密码 &#x2F; 直接授权给web验证），提交完成后再刷新下自己的仓库就可以看到本地的项目就已经提交上来了<br><img src="https://s2.loli.net/2023/03/07/j1vwXJmNUAxaieq.png" alt="image-20230307012212388.png" style="float:left" /><br>我们访问以下提交上来的博客地址：xxxx.github.io<br><img src="https://s2.loli.net/2023/03/07/VyEdrDobqJWnk1j.png" alt="image-20230307012531949.png" style="float:left" /><br>后期再进行优化，就先这样 下课！</p>
+<p>提交的过程中需要验证GitHub的token（默认自动弹窗确认账号密码 &#x2F; 直接授权给web验证），提交完成后再刷新下自己的仓库就可以看到本地的项目就已经提交上来了<br><img src="https://s2.loli.net/2023/03/07/j1vwXJmNUAxaieq.png" alt="image-20230307012212388.png" style="float:left" /></p>
+<p>我们访问以下提交上来的博客	地址：xxxx.github.io<br><img src="https://s2.loli.net/2023/03/07/VyEdrDobqJWnk1j.png" alt="image-20230307012531949.png" style="float:left" /><br>后期再进行优化，就先这样 下课！</p>
 
   </div>
 </article>
